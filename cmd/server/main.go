@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -9,6 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/zarishsphere-platform/zarish-fhir-server/internal/api"
 	"github.com/zarishsphere-platform/zarish-fhir-server/internal/database"
+	"github.com/zarishsphere-platform/zarish-fhir-server/internal/search"
 )
 
 func main() {
@@ -19,6 +19,9 @@ func main() {
 
 	// Connect to Database
 	database.Connect()
+
+	// Init Search
+	search.Init()
 
 	r := gin.Default()
 
