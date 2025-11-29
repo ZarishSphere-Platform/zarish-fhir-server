@@ -1,6 +1,6 @@
 module github.com/zarishsphere-platform/zarish-fhir-server
 
-go 1.25.4
+go 1.23.0
 
 require (
 	github.com/gin-gonic/gin v1.11.0
